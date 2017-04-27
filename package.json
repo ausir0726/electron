@@ -10,11 +10,15 @@
     "dev": "cross-env NODE_ENV=development electron .",
     "build": "nuxt build",
     "start": "electron .",
-    "pack": "npm run build && electron-packager ./ --overwrite"
+    "pack": "npm run build && electron-packager ./ --overwrite",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "cross-env": "^3.1.4",
     "electron": "^1.4.15",
-    "nuxt": "~0.10.5"
-  }
+    "nuxt": "~0.10.5",
+    "snyk": "^1.29.0"
+  },
+  "snyk": true
 }
