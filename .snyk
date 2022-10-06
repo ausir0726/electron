@@ -1,9 +1,42 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.0
+version: v1.25.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:concat-stream:20160901':
     - electron > extract-zip > concat-stream:
         reason: None given
         expires: '2017-05-27T05:19:36.484Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - electron > electron-download > debug:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > nugget > debug:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > sumchecker > debug:
+        patched: '2022-10-06T21:52:20.213Z'
+  'npm:extend:20180424':
+    - electron > electron-download > nugget > request > extend:
+        patched: '2022-10-06T21:52:20.213Z'
+  'npm:hoek:20180212':
+    - electron > electron-download > nugget > request > hawk > hoek:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > nugget > request > hawk > boom > hoek:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > nugget > request > hawk > sntp > hoek:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > nugget > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-10-06T21:52:20.213Z'
+  'npm:ms:20170412':
+    - electron > electron-download > debug > ms:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > nugget > debug > ms:
+        patched: '2022-10-06T21:52:20.213Z'
+    - electron > electron-download > sumchecker > debug > ms:
+        patched: '2022-10-06T21:52:20.213Z'
+  'npm:stringstream:20180511':
+    - electron > electron-download > nugget > request > stringstream:
+        patched: '2022-10-06T21:52:20.213Z'
+  'npm:tough-cookie:20170905':
+    - electron > electron-download > nugget > request > tough-cookie:
+        patched: '2022-10-06T21:52:20.213Z'
